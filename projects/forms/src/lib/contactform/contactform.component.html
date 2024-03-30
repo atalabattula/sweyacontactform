@@ -1,0 +1,26 @@
+<form [formGroup]="contactForm" (ngSubmit)="submit()">  
+    <div>
+        <label for="first-name">Name 
+            <span class="starcolor">*</span>
+        </label>
+        <input [ngClass]="{'error-border': formErrors['firstnameError']}" type="text" id="first-name" formControlName="firstname" placeholder="your name here">
+        <span *ngIf="formErrors['firstnameError']" class="errormsg">First Name is required</span>
+      </div>
+      <div>
+        <label for="email">Email Address <span class="starcolor">*</span></label>
+        <input [ngClass]="{'error-border': formErrors['userEmailRequiredError'] || formErrors['userEmailValidError']}" type="email" id="email" formControlName="useremail" placeholder="your email here">
+        <span *ngIf="formErrors['userEmailRequiredError']" class="text-white errormsg">User Email is required</span>
+        <span *ngIf="formErrors['userEmailValidError']" class="errormsg">Valid Email is required</span>
+      </div>
+  
+      <div>
+        <label for="message">Message: <span class="starcolor">*</span></label>
+        <textarea [ngClass]="{'error-border': formErrors['messagetextError']}" id="message" formControlName="messagetext" rows="10" cols="80" placeholder="your message here"></textarea>
+        <span *ngIf="formErrors['messagetextError']" class="errormsg">Message is required</span>
+      </div>
+  
+      <button class="msgbutton" type="submit">Send Message</button>
+      <div *ngIf="validmsg">
+        <span class="successmsg">Message Sent successfully</span>
+      </div>
+</form>

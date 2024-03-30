@@ -1,0 +1,14 @@
+{
+  "name": "basic-contact-form",
+  "version": "0.0.2",
+  "private": false,
+  "peerDependencies": {
+    "@angular/common": "^17.3.0",
+    "@angular/core": "^17.3.0"
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.3",
+    "tslib": "^2.3.0"
+  },
+  "sideEffects": false
+}
