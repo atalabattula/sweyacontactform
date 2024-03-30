@@ -11,6 +11,12 @@
 npm-debug.log
 yarn-error.log
 
+**********need to add this code in gitignore file to avoid adding node_modules into github******
+ 
+# misc
+ 
+/.angular/cache   
+
 # IDEs and editors
 .idea/
 .project
